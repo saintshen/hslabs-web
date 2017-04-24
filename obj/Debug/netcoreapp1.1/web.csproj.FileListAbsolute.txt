@@ -1,0 +1,8 @@
+/home/ming/hslabs/web/bin/Debug/netcoreapp1.1/web.deps.json
+/home/ming/hslabs/web/bin/Debug/netcoreapp1.1/web.runtimeconfig.json
+/home/ming/hslabs/web/bin/Debug/netcoreapp1.1/web.runtimeconfig.dev.json
+/home/ming/hslabs/web/bin/Debug/netcoreapp1.1/web.dll
+/home/ming/hslabs/web/bin/Debug/netcoreapp1.1/web.pdb
+/home/ming/hslabs/web/obj/Debug/netcoreapp1.1/web.AssemblyInfo.cs
+/home/ming/hslabs/web/obj/Debug/netcoreapp1.1/web.dll
+/home/ming/hslabs/web/obj/Debug/netcoreapp1.1/web.pdb

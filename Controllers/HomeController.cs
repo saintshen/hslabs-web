@@ -15,7 +15,7 @@ namespace webapp.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Tools for you.";
+            ViewData["Message"] = "like it.";
 
             return View();
         }

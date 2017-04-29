@@ -34,7 +34,7 @@ namespace webapp.Controllers
             }
 
             var word = await _context.Word
-                .SingleOrDefaultAsync(m => m.ID == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (word == null)
             {
                 return NotFound();
@@ -73,7 +73,7 @@ namespace webapp.Controllers
                 return NotFound();
             }
 
-            var word = await _context.Word.SingleOrDefaultAsync(m => m.ID == id);
+            var word = await _context.Word.SingleOrDefaultAsync(m => m.Id == id);
             if (word == null)
             {
                 return NotFound();
@@ -86,9 +86,9 @@ namespace webapp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Text,CreateDate,CreateUser")] Word word)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Text,CreateDate,CreateUser")] Word word)
         {
-            if (id != word.ID)
+            if (id != word.Id)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace webapp.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!WordExists(word.ID))
+                    if (!WordExists(word.Id))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace webapp.Controllers
             }
 
             var word = await _context.Word
-                .SingleOrDefaultAsync(m => m.ID == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (word == null)
             {
                 return NotFound();
@@ -139,7 +139,7 @@ namespace webapp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var word = await _context.Word.SingleOrDefaultAsync(m => m.ID == id);
+            var word = await _context.Word.SingleOrDefaultAsync(m => m.Id == id);
             _context.Word.Remove(word);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
@@ -147,7 +147,7 @@ namespace webapp.Controllers
 
         private bool WordExists(int id)
         {
-            return _context.Word.Any(e => e.ID == id);
+            return _context.Word.Any(e => e.Id == id);
         }
     }
 }
